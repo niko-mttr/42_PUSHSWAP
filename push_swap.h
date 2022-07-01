@@ -6,7 +6,7 @@
 /*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:58:36 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/06/30 19:05:29 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/01 19:05:45 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,11 @@ void	ft_index(t_list *stack, int sizeList);
 int 	ft_countIndex(int value, int index, t_list *stack);
 
 /* ****** push_swap_actions ****** */
+static void	rotate(t_list **stack);
+void	do_ra(t_list **stack_a);
+void	do_rb(t_list **stack_b);
+void	do_rr(t_list **stack_a, t_list **stack_b);
+t_list	*get_list_bottom(t_list *stack);
+void    ft_rotateA(t_list **stack);
 
 #endif

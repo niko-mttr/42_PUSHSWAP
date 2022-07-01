@@ -6,7 +6,7 @@
 /*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 15:31:47 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/06/30 17:52:57 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/01 18:34:02 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void    ft_exNumber(int sizeList, char **list)
 
     stack_test = ft_fillStack(sizeList, list);
     ft_index(stack_test, sizeList);
+    do_ra(&stack_test);
     ft_checkex(stack_test);
 }
 
