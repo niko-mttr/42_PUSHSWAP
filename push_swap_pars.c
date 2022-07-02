@@ -6,7 +6,7 @@
 /*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 18:06:38 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/06/30 15:10:03 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/02 19:43:27 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ int ft_parsNumber(int   sizeList, char **list)
     }
     if (check == 1)
         check = ft_doublon(sizeList, list, check);
-    //est ce qu'il faut trier INT MAX et INT MIN ??
+    else
+        ft_putstr_fd("Error", 1);
     return check;
 }
+    //est ce qu'il faut trier INT MAX et INT MIN ??

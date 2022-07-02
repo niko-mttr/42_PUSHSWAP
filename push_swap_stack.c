@@ -6,7 +6,7 @@
 /*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 15:31:55 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/06/30 18:31:59 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/02 17:43:08 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,34 +52,11 @@ t_list	*ft_lstlast(t_list *lst)
 	return (lst);
 }
 
-#include <stdio.h>
-
-int	ft_countIndex(int value, int index, t_list *stack)
+t_list	*ft_lstbeforelast(t_list *lst)
 {
-	// printf("la valeur : %d, l'index : %d || la valeur du maillon : %d\n", value, index, stack->value);
-	while (stack)
-	{
-		if (value > stack->value)
-			index++;
-		stack = stack->next; 
-	}
-	return (index);
-}
-
-void	ft_index(t_list *stack, int sizeList)
-{
-	int		nb;
-	t_list	*temp;
-	int		index;
-
-	temp = stack;
-	while (sizeList > 1)
-	{
-		index = 1;
-		index = ft_countIndex(temp->value, index, stack);
-		printf("la valeur de mon index %d\n", index);
-		sizeList--;
-		temp->index = index;
-		temp = temp->next;
-	}
+	if (!lst)
+		return (NULL);
+	while (lst->next && lst->next->next)
+		lst = lst->next;
+	return (lst);
 }
