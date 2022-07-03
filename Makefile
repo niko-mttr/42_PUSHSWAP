@@ -6,7 +6,7 @@
 #    By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/23 12:13:08 by nmattera          #+#    #+#              #
-#    Updated: 2022/07/02 19:41:54 by nicolasmatt      ###   ########.fr        #
+#    Updated: 2022/07/03 20:45:09 by nicolasmatt      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ NAME = pushswap.a
 SRCS =	push_swap.c push_swap_pars.c \
 		push_swap_checkex.c push_swap_stack.c \
 		push_swap_actions.c push_swap_infos.c \
-		push_swap_order.c
+		push_swap_order.c push_swap_three.c \
 
 OBJS = $(SRCS:.c=.o)
 

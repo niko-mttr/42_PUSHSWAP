@@ -6,7 +6,7 @@
 /*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 18:06:38 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/02 19:43:27 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/03 20:41:29 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,6 @@ int ft_doublon(int sizeList, char **list, int check)
     return check;
 }
 
-int ft_is_num(char c)
-{
-    if (c >= '0' && c <= '9')
-        return 1;
-    return 0;
-}
-
 int ft_parsNumber(int   sizeList, char **list)
 {
     int index;
@@ -60,12 +53,12 @@ int ft_parsNumber(int   sizeList, char **list)
 
     check = 1;
     index = 1;
-    i = 0;
     while (index < sizeList && check == 1)
     {
+        i = 0;
         while (list[index][i])
         {
-            if (!ft_is_num(list[index][i]))
+            if (!ft_isdigit(list[index][i]))
                 check = 0;
             i++;
         }

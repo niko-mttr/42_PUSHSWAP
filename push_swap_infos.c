@@ -6,7 +6,7 @@
 /*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 18:25:37 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/02 17:46:31 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/03 20:41:35 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,22 @@ void	ft_index(t_list *stack, int sizeList)
 	{
 		index = 1;
 		index = ft_countIndex(temp->value, index, stack);
-		printf("la valeur de mon index %d\n", index);
 		sizeList--;
 		temp->index = index;
 		temp = temp->next;
+	}
+}
+
+void	ft_position(t_list **stack)
+{
+	int	pos;
+
+	pos = 1;
+	while ((*stack))
+	{
+		(*stack)->pos = pos;
+		(*stack) = (*stack)->next;
+		pos++;
 	}
 }
 

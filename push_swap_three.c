@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_order.c                                  :+:      :+:    :+:   */
+/*   push_swap_three.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/02 19:42:02 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/03 19:24:42 by nicolasmatt      ###   ########.fr       */
+/*   Created: 2022/07/03 20:43:33 by nicolasmatt       #+#    #+#             */
+/*   Updated: 2022/07/03 20:53:19 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
-int ft_checkOrder(t_list *stack)
-{
-    int temp;
 
-    temp = stack->value;
-    while (stack)
-    {
-        printf("moin temp : %d // stack->value : %d \n", temp, stack->value);
-        if (temp > stack->value)
-            return 0;
-        temp = stack->value;
-        stack = stack->next;
-    }
-    printf("C'est tout bon !!\n");
-    return 1;
+void    ft_three(t_list *stack)
+{
+    if (1)
+        return ;
 }
+    //si l'index du premier est le plus garnd on fait ra
+    //sinon si l'index du deuxieme nombre est le lus grand on fait rra
+    //ensuite si l'index du premeir nombre > index du deuxieme nombre on fait sa

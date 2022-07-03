@@ -6,11 +6,12 @@
 /*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 15:31:47 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/02 18:00:28 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/03 20:07:54 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
 t_list *ft_fillStack(int sizeList, char **list)
 {
@@ -36,9 +37,19 @@ void    ft_exNumber(int sizeList, char **list)
 {
     t_list *stack_test;
 
+    printf("je apsse dans mon ex\n");
     stack_test = ft_fillStack(sizeList, list);
     ft_index(stack_test, sizeList);
-    ft_swap(&stack_test);
+    // ft_position(&stack_test);
+    if (!ft_checkOrder(stack_test))
+    {
+        if (sizeList - 1 == 2)
+           ft_swap(&stack_test, "SA\n");
+        // else if (sizeList == 3)
+        //     ft_algo_three();
+        // else
+        //     ft_algo();
+    }
     ft_checkex(stack_test);
 }
 

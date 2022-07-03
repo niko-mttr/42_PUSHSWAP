@@ -6,7 +6,7 @@
 /*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 15:16:31 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/02 19:43:21 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/03 20:04:46 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void ft_checkex(t_list *chaine)
 {
     while (chaine)
     {
-        printf("%d ", chaine->value);
+        printf("la valeur %d || la position %d\n", chaine->value, chaine->pos);
         chaine = chaine->next;
     }
     printf("\n");
