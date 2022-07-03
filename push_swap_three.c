@@ -6,7 +6,7 @@
 /*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 20:43:33 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/03 20:53:19 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/03 21:05:52 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,12 @@
 
 void    ft_three(t_list *stack)
 {
-    if (1)
-        return ;
+    if (stack->index == 3)
+        ft_rotate(&stack, "RA\n");
+    else if (stack->index == 2)
+        ft_reverseRotate(&stack, "RRA\n");
+    if (stack->index > stack->next->index)
+        ft_swap(&stack, "SA\n");
 }
     //si l'index du premier est le plus garnd on fait ra
     //sinon si l'index du deuxieme nombre est le lus grand on fait rra

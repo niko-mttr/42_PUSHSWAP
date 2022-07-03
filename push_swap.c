@@ -6,7 +6,7 @@
 /*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 15:31:47 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/03 20:07:54 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/03 21:06:08 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ void    ft_exNumber(int sizeList, char **list)
 {
     t_list *stack_test;
 
-    printf("je apsse dans mon ex\n");
     stack_test = ft_fillStack(sizeList, list);
     ft_index(stack_test, sizeList);
     // ft_position(&stack_test);
@@ -45,8 +44,8 @@ void    ft_exNumber(int sizeList, char **list)
     {
         if (sizeList - 1 == 2)
            ft_swap(&stack_test, "SA\n");
-        // else if (sizeList == 3)
-        //     ft_algo_three();
+        else if (sizeList - 1 == 3)
+            ft_three(stack_test);
         // else
         //     ft_algo();
     }
