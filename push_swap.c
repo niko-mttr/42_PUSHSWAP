@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 15:31:47 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/04 10:53:24 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/04 12:21:35 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,26 @@ t_list *ft_fillStack(int sizeList, char **list)
 
 void    ft_exNumber(int sizeList, char **list)
 {
-    t_list *stack_test;
+    t_list  *stack_a;
+    t_list  *stack_b;
 
-    stack_test = ft_fillStack(sizeList, list);
-    ft_index(stack_test, sizeList);
-    ft_position(stack_test);
-    if (!ft_checkOrder(stack_test))
+    stack_b = malloc(sizeof(*stack_b));
+    stack_b = NULL;
+    stack_a = ft_fillStack(sizeList, list);
+    ft_index(stack_a, sizeList);
+    ft_position(stack_a);
+    if (!ft_checkOrder(stack_a))
     {
         if (sizeList - 1 == 2)
-           ft_swap(&stack_test, "SA\n");
+           ft_swap(&stack_a, "SA\n");
         else if (sizeList - 1 == 3)
-            ft_three(&stack_test);
+            ft_three(&stack_a);
         // else
         //     ft_algo();
     }
-    ft_checkex(stack_test);
+    ft_pb(&stack_a, &stack_b, "PB\n");
+    ft_checkex(stack_a);
+    ft_checkex(stack_b);
 }
 
 int main(int argc, char **argv)

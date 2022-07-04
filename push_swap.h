@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:58:36 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/04 09:44:47 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/04 12:12:23 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void ft_checkex(t_list *chaine);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstbeforelast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 t_list  *ft_lstNewNumber(int  number, int pos);
 
 /* ****** push_swap_infos ****** */
@@ -52,6 +53,7 @@ void	ft_position(t_list *stack);
 void    ft_rotate(t_list **stack, char *instruction);
 void    ft_reverseRotate(t_list **stack, char *instruction);
 void    ft_swap(t_list **stack, char *instruction);
+void    ft_pb(t_list **stack_a, t_list **stack_b, char * instruction);
 
 /* ****** push_swap_order.c ****** */
 int     ft_checkOrder(t_list *stack);

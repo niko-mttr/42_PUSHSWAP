@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+         #
+#    By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/23 12:13:08 by nmattera          #+#    #+#              #
-#    Updated: 2022/07/03 20:45:09 by nicolasmatt      ###   ########.fr        #
+#    Updated: 2022/07/04 12:22:58 by nmattera         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRCS =	push_swap.c push_swap_pars.c \
 		push_swap_checkex.c push_swap_stack.c \
 		push_swap_actions.c push_swap_infos.c \
 		push_swap_order.c push_swap_three.c \
+		push_swap_more.c
 
 OBJS = $(SRCS:.c=.o)
 

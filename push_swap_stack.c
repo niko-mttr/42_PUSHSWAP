@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 15:31:55 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/04 09:34:14 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/04 11:57:07 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,12 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	}
 	else
 		*lst = new;
+}
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	new->next = *lst;
+	*lst = new;
 }
 
 t_list	*ft_lstlast(t_list *lst)
