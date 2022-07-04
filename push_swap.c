@@ -6,12 +6,29 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 15:31:47 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/04 13:56:45 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/04 19:24:55 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
+
+t_list  *ft_lstNewNumber(int  number, int pos)
+{
+    t_list  *new;
+
+    new = malloc(sizeof(*new));
+    if(!new)
+        return (NULL);
+    new->value = number;
+    new->index = 0;
+    new->pos = 1;
+    new->target_pos = -1;
+    new->cost_a = -1;
+    new->cost_b = -1;
+    new->next = NULL;
+	return (new);
+}
 
 t_list *ft_fillStack(int sizeList, char **list)
 {

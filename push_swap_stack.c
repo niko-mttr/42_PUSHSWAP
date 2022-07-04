@@ -6,28 +6,11 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 15:31:55 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/04 11:57:07 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/04 19:31:36 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-t_list  *ft_lstNewNumber(int  number, int pos)
-{
-    t_list  *new;
-
-    new = malloc(sizeof(*new));
-    if(!new)
-        return (NULL);
-    new->value = number;
-    new->index = 0;
-    new->pos = 1;/*pos*/
-    new->target_pos = -1;
-    new->cost_a = -1;
-    new->cost_b = -1;
-    new->next = NULL;
-	return (new);
-}
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
@@ -65,4 +48,17 @@ t_list	*ft_lstbeforelast(t_list *lst)
 	while (lst->next && lst->next->next)
 		lst = lst->next;
 	return (lst);
+}
+
+int	ft_lstsize(t_list *lst)
+{
+	int	size;
+
+	size = 0;
+	while (lst)
+	{
+		size++;
+		lst = lst->next;
+	}
+	return (size);
 }

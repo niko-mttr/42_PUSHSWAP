@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:58:36 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/04 18:12:27 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/04 19:29:52 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@ typedef struct s_list
     struct s_list  *next;
 }               t_list;
 
+/* ****** push_swap.c ****** */
+t_list  *ft_lstNewNumber(int  number, int pos);
+t_list *ft_fillStack(int sizeList, char **list);
+void    ft_exNumber(int sizeList, char **list);
+int main(int argc, char **argv);
+
 /* ******* push_swap_pars ****** */
 int ft_parsNumber(int   sizeList, char **list);
 int ft_is_num(char c);
@@ -42,13 +48,12 @@ t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstbeforelast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
-t_list  *ft_lstNewNumber(int  number, int pos);
+int	    ft_lstsize(t_list *lst);
 
 /* ****** push_swap_infos ****** */
 void	ft_index(t_list *stack, int sizeList);
 int 	ft_countIndex(int value, int index, t_list *stack);
 void	ft_position(t_list *stack);
-void	ft_target_pos(t_list *stack_a, t_list *stack_b);
 void	ft_space(t_list *stack_a, t_list *stack_b, int sizeList);
 
 /* ****** push_swap_actions ****** */

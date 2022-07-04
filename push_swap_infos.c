@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 18:25:37 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/04 18:45:17 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/04 19:30:40 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,12 @@ void	ft_position(t_list *stack)
 void	ft_space(t_list *stack_a, t_list *stack_b, int sizeList)
 {
 	t_list	*temp;
+	int	sizeList_a;
 	int i;
 
+
+	sizeList_a = ft_lstsize(stack_a);
+	printf("la taille de ma liste : %d\n", sizeList_a);
 	while (stack_b)
 	{
 		ft_position(stack_a);
@@ -70,39 +74,10 @@ void	ft_space(t_list *stack_a, t_list *stack_b, int sizeList)
 			temp = temp->next;
 			i++;
 		}
-		stack_b->target_pos = i;
+		if (i > sizeList_a)
+			stack_b->target_pos = 1;
+		else
+			stack_b->target_pos = i;
 		stack_b = stack_b->next;
 	}
 }
-
-void	ft_target_pos(t_list *stack_a, t_list *stack_b)
-{
-	int space;
-	int	target_pos;
-	t_list	*temp1;
-	t_list	*temp2;
-	
-
-	while (stack_b)
-	{
-		temp1 = stack_a;
-		temp2 = stack_a;
-		while (temp1->value < stack_b->value)
-			temp1 = temp1->next;
-		space = temp1->value - stack_b->value;
-		stack_b->target_pos = temp1->pos;
-		while (temp2)
-		{
-			if (temp2->value - stack_b->value < space)
-			{
-				printf("je passe la !!!\n");
-				space = temp2->value - stack_b->value;
-				stack_b->target_pos = temp2->pos;
-			}
-			temp2 = temp2->next;
-		}
-
-		stack_b = stack_b->next;
-	}
-}
-
