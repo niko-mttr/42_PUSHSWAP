@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_stack.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
+/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 15:31:55 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/02 17:43:08 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/04 09:34:14 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_list  *ft_lstNewNumber(int  number, int pos)
         return (NULL);
     new->value = number;
     new->index = 0;
-    new->pos = pos;
+    new->pos = 1;/*pos*/
     new->target_pos = -1;
     new->cost_a = -1;
     new->cost_b = -1;

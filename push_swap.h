@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
+/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:58:36 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/03 20:46:07 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/04 09:44:47 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ t_list  *ft_lstNewNumber(int  number, int pos);
 /* ****** push_swap_infos ****** */
 void	ft_index(t_list *stack, int sizeList);
 int 	ft_countIndex(int value, int index, t_list *stack);
-void	ft_position(t_list **stack);
+void	ft_position(t_list *stack);
 
 /* ****** push_swap_actions ****** */
 void    ft_rotate(t_list **stack, char *instruction);
@@ -57,6 +57,6 @@ void    ft_swap(t_list **stack, char *instruction);
 int     ft_checkOrder(t_list *stack);
 
 /* ****** push_swap_order.c ****** */
-void    ft_three(t_list *stack);
+void    ft_three(t_list **stack);
 
 #endif

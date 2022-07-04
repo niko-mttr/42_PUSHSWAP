@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_infos.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
+/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 18:25:37 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/03 20:41:35 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/04 09:38:24 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 int	ft_countIndex(int value, int index, t_list *stack)
 {
-	// printf("la valeur : %d, l'index : %d || la valeur du maillon : %d\n", value, index, stack->value);
 	while (stack)
 	{
 		if (value > stack->value)
@@ -42,15 +41,15 @@ void	ft_index(t_list *stack, int sizeList)
 	}
 }
 
-void	ft_position(t_list **stack)
+void	ft_position(t_list *stack)
 {
 	int	pos;
 
 	pos = 1;
-	while ((*stack))
+	while (stack)
 	{
-		(*stack)->pos = pos;
-		(*stack) = (*stack)->next;
+		stack->pos = pos;
+		stack = stack->next;
 		pos++;
 	}
 }

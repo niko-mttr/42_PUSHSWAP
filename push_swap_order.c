@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_order.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
+/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 19:42:02 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/03 19:24:42 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/04 09:24:44 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int ft_checkOrder(t_list *stack)
     temp = stack->value;
     while (stack)
     {
-        printf("moin temp : %d // stack->value : %d \n", temp, stack->value);
         if (temp > stack->value)
             return 0;
         temp = stack->value;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_actions.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
+/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 18:36:42 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/03 21:05:36 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/04 10:07:08 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void    ft_rotate(t_list **stack, char *instruction)
     t_list  *tail;
 
     temp = *stack;
-    temp->next=NULL;
     *stack = (*stack)->next;
     tail = ft_lstlast(*stack);
+    temp->next=NULL;
     tail->next = temp;
     ft_putstr_fd(instruction, 1);
 }

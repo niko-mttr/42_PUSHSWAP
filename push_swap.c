@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
+/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 15:31:47 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/03 21:06:08 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/04 10:53:24 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,20 @@ t_list *ft_fillStack(int sizeList, char **list)
 {
     int pos;
     int number;
-    t_list  *stackA;
+    t_list  *stack;
 
-    stackA = NULL;
+    stack = NULL;
     pos = 1;
     while (pos < sizeList)
     {
         number = ft_atoi(list[pos]);
         if (pos == 1)
-            stackA = ft_lstNewNumber(number, pos);
+            stack = ft_lstNewNumber(number, pos);
         else
-            ft_lstadd_back(&stackA, ft_lstNewNumber(number, pos));
+            ft_lstadd_back(&stack, ft_lstNewNumber(number, pos));
         pos++;
     }
-    return (stackA);
+    return (stack);
 }
 
 void    ft_exNumber(int sizeList, char **list)
@@ -39,13 +39,13 @@ void    ft_exNumber(int sizeList, char **list)
 
     stack_test = ft_fillStack(sizeList, list);
     ft_index(stack_test, sizeList);
-    // ft_position(&stack_test);
+    ft_position(stack_test);
     if (!ft_checkOrder(stack_test))
     {
         if (sizeList - 1 == 2)
            ft_swap(&stack_test, "SA\n");
         else if (sizeList - 1 == 3)
-            ft_three(stack_test);
+            ft_three(&stack_test);
         // else
         //     ft_algo();
     }

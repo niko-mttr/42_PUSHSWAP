@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_checkex.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
+/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 15:16:31 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/03 20:04:46 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/04 09:48:25 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void ft_checkex(t_list *chaine)
 {
     while (chaine)
     {
-        printf("la valeur %d || la position %d\n", chaine->value, chaine->pos);
+        printf("%d || l'index : %d\n", chaine->value, chaine->index);
         chaine = chaine->next;
     }
     printf("\n");
