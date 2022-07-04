@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 18:25:37 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/04 19:30:40 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/04 19:39:22 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ void	ft_space(t_list *stack_a, t_list *stack_b, int sizeList)
 
 
 	sizeList_a = ft_lstsize(stack_a);
-	printf("la taille de ma liste : %d\n", sizeList_a);
 	while (stack_b)
 	{
 		ft_position(stack_a);
