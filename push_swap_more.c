@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 12:22:23 by nmattera          #+#    #+#             */
-/*   Updated: 2022/07/04 14:49:38 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/04 18:13:52 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,21 @@
 void	ft_more(t_list **stack_a, t_list **stack_b, int sizeList)
 {
 	int	mediane;
+	int sizeList_b;
+	int	count;
 
+	count = 0;
 	mediane = sizeList / 2;
+	sizeList_b = sizeList - 3;
 	printf("\nsizeList : %d\n", sizeList);
 	printf("ma mediane : %d\n", mediane);
-	while (sizeList - 3 > 0)
+	while (count < sizeList_b)
 	{
-		while (sizeList > mediane + 1)
+		while (sizeList > mediane + 1 && count < sizeList_b -1)
 		{
 			if ((*stack_a)->index <= mediane)
 			{
+				count++;
 				sizeList--;
 				ft_push(stack_a, stack_b, "PB\n");
 			}
@@ -33,15 +38,16 @@ void	ft_more(t_list **stack_a, t_list **stack_b, int sizeList)
 				ft_rotate(stack_a, "RA\n");
 		}		
 		ft_push(stack_a, stack_b, "PB\n");
-		sizeList--;
+		count++;
 	}
 	ft_three(stack_a);
-	// while(*stack_b/*des nombres dans la stack_b*/)
-	// {
-		// ft_position(stack_b);
-		//calculer la position cible dans la pile A
+	while(sizeList_b)
+	{
+		ft_position(*stack_b);
+		ft_space(*stack_a, *stack_b, sizeList + 3);
 		//calculer le nombre d'actions(choisir l'element le moins couteux)
 		//push(stack_b, stack_a, "PA\n");
-	// }
+		sizeList_b--; 
+	}
 	//trier la stack_a pour qu'elle soit dans le bon ordre avec RA et RRA
 }

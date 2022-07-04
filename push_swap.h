@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:58:36 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/04 15:14:05 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/04 18:12:27 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ t_list  *ft_lstNewNumber(int  number, int pos);
 void	ft_index(t_list *stack, int sizeList);
 int 	ft_countIndex(int value, int index, t_list *stack);
 void	ft_position(t_list *stack);
+void	ft_target_pos(t_list *stack_a, t_list *stack_b);
+void	ft_space(t_list *stack_a, t_list *stack_b, int sizeList);
 
 /* ****** push_swap_actions ****** */
 void    ft_rotate(t_list **stack, char *instruction);

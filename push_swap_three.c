@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 20:43:33 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/04 15:22:35 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/04 16:08:30 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ static int ft_index_max(t_list *stack, int indexRef)
 {
     while (stack)
     {
-        printf("je rentre dans mon max\n");
         if (stack->index > indexRef)
             return 0;
         stack = stack->next;
