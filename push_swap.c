@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 15:31:47 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/04 12:21:35 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/04 13:56:45 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,11 @@ void    ft_exNumber(int sizeList, char **list)
            ft_swap(&stack_a, "SA\n");
         else if (sizeList - 1 == 3)
             ft_three(&stack_a);
-        // else
-        //     ft_algo();
+        else if (sizeList - 1 > 3)
+            ft_more(&stack_a, &stack_b, sizeList - 1);
     }
-    ft_pb(&stack_a, &stack_b, "PB\n");
-    ft_checkex(stack_a);
-    ft_checkex(stack_b);
+    ft_checkex(stack_a, "-----stack_a-----\n");
+    ft_checkex(stack_b, "-----stack_b-----\n");
 }
 
 int main(int argc, char **argv)

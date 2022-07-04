@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 18:36:42 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/04 12:14:47 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/04 13:33:49 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void    ft_swap(t_list **stack, char *instruction)
     ft_putstr_fd(instruction, 1);
 }
 
-void    ft_pb(t_list **stack_a, t_list **stack_b, char *instruction)
+void    ft_push(t_list **stack_a, t_list **stack_b, char *instruction)
 {
     t_list *transfer;
     t_list *newTop;
@@ -65,5 +65,5 @@ void    ft_pb(t_list **stack_a, t_list **stack_b, char *instruction)
     *stack_a = (*stack_a)->next;
     ft_lstadd_front(stack_b, transfer);
     ft_putstr_fd(instruction, 1);
-    // est ce que e dois free mon transfer dans ma stack_a
+    // est ce que je dois free mon transfer dans ma stack_a
 }

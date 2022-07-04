@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:58:36 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/04 12:12:23 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/04 15:14:05 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int ft_doublon(int sizeList, char **list, int check);
 int	ft_strcmp(char *s1, char *s2);
 
 /* ******* push_swap_checkex ******* */
-void ft_checkex(t_list *chaine);
+void ft_checkex(t_list *chaine, char *name);
 
 /* ******* push_swap_stack ****** */
 t_list	*ft_lstlast(t_list *lst);
@@ -53,12 +53,17 @@ void	ft_position(t_list *stack);
 void    ft_rotate(t_list **stack, char *instruction);
 void    ft_reverseRotate(t_list **stack, char *instruction);
 void    ft_swap(t_list **stack, char *instruction);
-void    ft_pb(t_list **stack_a, t_list **stack_b, char * instruction);
+void    ft_push(t_list **stack_a, t_list **stack_b, char * instruction);
 
 /* ****** push_swap_order.c ****** */
 int     ft_checkOrder(t_list *stack);
 
-/* ****** push_swap_order.c ****** */
+/* ****** push_swap_three.c ****** */
+static int ft_index_max(t_list *stack, int indexRef);
+static int ft_index_middle(t_list *stack, int indexRef);
 void    ft_three(t_list **stack);
+
+/* ****** push_swap_more.c ****** */
+void	ft_more(t_list **stack_a, t_list **stack_b, int sizeList);
 
 #endif
