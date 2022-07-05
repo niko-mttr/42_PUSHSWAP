@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_more.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
+/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 12:22:23 by nmattera          #+#    #+#             */
-/*   Updated: 2022/07/05 13:30:41 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/05 14:44:59 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ void	ft_more(t_list **stack_a, t_list **stack_b, int sizeList)
 			{
 				count++;
 				sizeList--;
-				ft_push(stack_a, stack_b, "PB\n");
+				ft_callAction(stack_a, stack_b, "PB");
 			}
 			else
-				ft_rotate(stack_a, "RA\n");
+				ft_callAction(stack_a, stack_b, "RA");
 		}		
-		ft_push(stack_a, stack_b, "PB\n");
+		ft_callAction(stack_a, stack_b, "PB");
 		count++;
 	}
 	ft_three(stack_a);
@@ -45,8 +45,8 @@ void	ft_more(t_list **stack_a, t_list **stack_b, int sizeList)
 	{
 		ft_position(*stack_b);
 		ft_space(*stack_a, *stack_b, sizeList + 3);
-		//calculer le nombre d'actions(choisir l'element le moins couteux)
-		//push(stack_b, stack_a, "PA\n");
+		ft_cost(*stack_a, *stack_b);
+		ft_doAction(ft_chooseStack(*stack_b));
 		sizeList_b--; 
 	}
 	//trier la stack_a pour qu'elle soit dans le bon ordre avec RA et RRA

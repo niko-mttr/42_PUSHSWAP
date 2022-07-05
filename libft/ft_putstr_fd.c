@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 14:54:08 by nmattera          #+#    #+#             */
-/*   Updated: 2022/05/17 16:38:08 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/05 14:37:04 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,5 @@ void	ft_putstr_fd(char *s, int fd)
 	i = -1;
 	while (s[++i])
 		write(fd, &s[i], 1);
+	write(1, '\n', 1);
 }

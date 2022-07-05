@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_three.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
+/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 20:43:33 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/05 13:30:47 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/05 14:36:23 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,18 @@ static int ft_index_middle(t_list *stack, int indexRef)
 void    ft_three(t_list **stack)
 {
     if (ft_index_max(*stack, (*stack)->next->index))
-        ft_reverseRotate(stack, "RRA\n");
+    {
+        ft_reverseRotate(stack);
+        ft_putstr_fd("RRA", 1);
+    }
     if (ft_index_max(*stack ,(*stack)->index))
-        ft_rotate(stack, "RA\n");
+    {
+        ft_rotate(stack);
+        ft_putstr_fd("RA", 1);
+    }
     if ((*stack)->index == 2/*mon index du milieu*/)
-        ft_swap(stack, "SA\n");
+    {
+       ft_swap(stack);
+       ft_putstr_fd("SA", 1);
+    }
 }

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_actions.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
+/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 18:36:42 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/05 13:30:38 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/05 14:33:37 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    ft_rotate(t_list **stack, char *instruction)
+void    ft_rotate(t_list **stack)
 {
     t_list  *temp;
     t_list  *tail;
@@ -22,10 +22,9 @@ void    ft_rotate(t_list **stack, char *instruction)
     tail = ft_lstlast(*stack);
     temp->next=NULL;
     tail->next = temp;
-    ft_putstr_fd(instruction, 1);
 }
 
-void    ft_reverseRotate(t_list **stack, char *instruction)
+void    ft_reverseRotate(t_list **stack)
 {
     t_list  *temp;
     t_list  *top;
@@ -37,10 +36,9 @@ void    ft_reverseRotate(t_list **stack, char *instruction)
     *stack = top;
     top->next = temp;
     beforeLast->next = NULL;
-    ft_putstr_fd(instruction, 1);
 }
 
-void    ft_swap(t_list **stack, char *instruction)
+void    ft_swap(t_list **stack)
 {
     int	tmp;
 
@@ -52,18 +50,43 @@ void    ft_swap(t_list **stack, char *instruction)
 	tmp = (*stack)->index;
 	(*stack)->index = (*stack)->next->index;
 	(*stack)->next->index = tmp;
-    ft_putstr_fd(instruction, 1);
 }
 
-void    ft_push(t_list **stack_a, t_list **stack_b, char *instruction)
+void    ft_push(t_list **src, t_list **dest)
 {
     t_list *transfer;
-    t_list *newTop;
+    t_list *destewTop;
     
 
-    transfer = *stack_a;
-    *stack_a = (*stack_a)->next;
-    ft_lstadd_front(stack_b, transfer);
-    ft_putstr_fd(instruction, 1);
-    // est ce que je dois free mon transfer dans ma stack_a
+    transfer = *src;
+    *src = (*src)->next;
+    ft_lstadd_front(dest, transfer);
+    // est ce que je dois free mon transfer dans ma src
+}
+
+void    ft_callAction(t_list **stack_a, t_list **stack_b, char *call)
+{
+    if (call == "PB")
+        ft_push(stack_a, stack_b);
+    if (call == "PA")
+        ft_push(stack_b, stack_a);
+    if (call == "RA")
+        ft_rotate(stack_a);
+    if (call == "RB")
+        ft_rotate(stack_b);
+    if (call == "RRA")
+        ft_reverseRotate(stack_a);
+    if (call == "RRB")
+        ft_reverseRotate(stack_b);
+    if (call == "RR")
+    {
+        ft_rotate(stack_a);
+        ft_rotate(stack_b);
+    }
+    if (call == "RRR")
+    {
+        ft_reverseRotate(stack_a);
+        ft_reverseRotate(stack_b);
+    }
+    ft_putstr_fd(call, 1);
 }

@@ -1,0 +1,62 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/mnt/nfs/homes/nmattera/Desktop/42_PUSHSWAP'
+gcc -Wall -Wextra -Werror -c -I ./libft push_swap.c -o push_swap.o
+gcc -Wall -Wextra -Werror -c -I ./libft push_swap_pars.c -o push_swap_pars.o
+gcc -Wall -Wextra -Werror -c -I ./libft push_swap_checkex.c -o push_swap_checkex.o
+gcc -Wall -Wextra -Werror -c -I ./libft push_swap_stack.c -o push_swap_stack.o
+gcc -Wall -Wextra -Werror -c -I ./libft push_swap_actions.c -o push_swap_actions.o
+gcc -Wall -Wextra -Werror -c -I ./libft push_swap_infos.c -o push_swap_infos.o
+gcc -Wall -Wextra -Werror -c -I ./libft push_swap_order.c -o push_swap_order.o
+gcc -Wall -Wextra -Werror -c -I ./libft push_swap_three.c -o push_swap_three.o
+gcc -Wall -Wextra -Werror -c -I ./libft push_swap_more.c -o push_swap_more.o
+cd ./libft && make
+ 
+make[1]: Entering directory '/mnt/nfs/homes/nmattera/Desktop/42_PUSHSWAP/libft'
+gcc -Wall -Wextra -Werror -g -c ft_isalpha.c -o ft_isalpha.o
+gcc -Wall -Wextra -Werror -g -c ft_isdigit.c -o ft_isdigit.o
+gcc -Wall -Wextra -Werror -g -c ft_isalnum.c -o ft_isalnum.o
+gcc -Wall -Wextra -Werror -g -c ft_isascii.c -o ft_isascii.o
+gcc -Wall -Wextra -Werror -g -c ft_isprint.c -o ft_isprint.o
+gcc -Wall -Wextra -Werror -g -c ft_strlen.c -o ft_strlen.o
+gcc -Wall -Wextra -Werror -g -c ft_strmapi.c -o ft_strmapi.o
+gcc -Wall -Wextra -Werror -g -c ft_memset.c -o ft_memset.o
+gcc -Wall -Wextra -Werror -g -c ft_bzero.c -o ft_bzero.o
+gcc -Wall -Wextra -Werror -g -c ft_memcpy.c -o ft_memcpy.o
+gcc -Wall -Wextra -Werror -g -c ft_memmove.c -o ft_memmove.o
+gcc -Wall -Wextra -Werror -g -c ft_strlcpy.c -o ft_strlcpy.o
+gcc -Wall -Wextra -Werror -g -c ft_strlcat.c -o ft_strlcat.o
+gcc -Wall -Wextra -Werror -g -c ft_toupper.c -o ft_toupper.o
+gcc -Wall -Wextra -Werror -g -c ft_tolower.c -o ft_tolower.o
+gcc -Wall -Wextra -Werror -g -c ft_strchr.c -o ft_strchr.o
+gcc -Wall -Wextra -Werror -g -c ft_strrchr.c -o ft_strrchr.o
+gcc -Wall -Wextra -Werror -g -c ft_strncmp.c -o ft_strncmp.o
+gcc -Wall -Wextra -Werror -g -c ft_memchr.c -o ft_memchr.o
+gcc -Wall -Wextra -Werror -g -c ft_memcmp.c -o ft_memcmp.o
+gcc -Wall -Wextra -Werror -g -c ft_strnstr.c -o ft_strnstr.o
+gcc -Wall -Wextra -Werror -g -c ft_atoi.c -o ft_atoi.o
+gcc -Wall -Wextra -Werror -g -c ft_calloc.c -o ft_calloc.o
+gcc -Wall -Wextra -Werror -g -c ft_strdup.c -o ft_strdup.o
+gcc -Wall -Wextra -Werror -g -c ft_substr.c -o ft_substr.o
+gcc -Wall -Wextra -Werror -g -c ft_striteri.c -o ft_striteri.o
+gcc -Wall -Wextra -Werror -g -c ft_strjoin.c -o ft_strjoin.o
+gcc -Wall -Wextra -Werror -g -c ft_strtrim.c -o ft_strtrim.o
+gcc -Wall -Wextra -Werror -g -c ft_split.c -o ft_split.o
+gcc -Wall -Wextra -Werror -g -c ft_itoa.c -o ft_itoa.o
+gcc -Wall -Wextra -Werror -g -c ft_putstr_fd.c -o ft_putstr_fd.o
+gcc -Wall -Wextra -Werror -g -c ft_putnbr_fd.c -o ft_putnbr_fd.o
+gcc -Wall -Wextra -Werror -g -c ft_putendl_fd.c -o ft_putendl_fd.o
+gcc -Wall -Wextra -Werror -g -c ft_putchar_fd.c -o ft_putchar_fd.o
+gcc -Wall -Wextra -Werror -g -c ft_character.c -o ft_character.o
+gcc -Wall -Wextra -Werror -g -c ft_convert.c -o ft_convert.o
+gcc -Wall -Wextra -Werror -g -c ft_hexa.c -o ft_hexa.o
+gcc -Wall -Wextra -Werror -g -c ft_number.c -o ft_number.o
+gcc -Wall -Wextra -Werror -g -c ft_pointer.c -o ft_pointer.o
+gcc -Wall -Wextra -Werror -g -c ft_printf.c -o ft_printf.o
+gcc -Wall -Wextra -Werror -g -c ft_string.c -o ft_string.o
+gcc -Wall -Wextra -Werror -g -c ft_unsigned.c -o ft_unsigned.o
+ar rcs libft.a ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_strlen.o ft_strmapi.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memmove.o ft_strlcpy.o ft_strlcat.o ft_toupper.o ft_tolower.o ft_strchr.o ft_strrchr.o ft_strncmp.o ft_memchr.o ft_memcmp.o ft_strnstr.o ft_atoi.o ft_calloc.o ft_strdup.o ft_substr.o ft_striteri.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_putstr_fd.o ft_putnbr_fd.o ft_putendl_fd.o ft_putchar_fd.o ft_character.o ft_convert.o ft_hexa.o ft_number.o ft_pointer.o ft_printf.o ft_string.o ft_unsigned.o
+make[1]: Leaving directory '/mnt/nfs/homes/nmattera/Desktop/42_PUSHSWAP/libft'
+cp libft/libft.a pushswap.a
+ar -rcs pushswap.a push_swap.o push_swap_pars.o push_swap_checkex.o push_swap_stack.o push_swap_actions.o push_swap_infos.o push_swap_order.o push_swap_three.o push_swap_more.o
+make: Leaving directory '/mnt/nfs/homes/nmattera/Desktop/42_PUSHSWAP'
+ 
