@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_infos.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 18:25:37 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/04 19:39:22 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/05 11:39:43 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,25 @@ void	ft_space(t_list *stack_a, t_list *stack_b, int sizeList)
 			stack_b->target_pos = 1;
 		else
 			stack_b->target_pos = i;
+		stack_b = stack_b->next;
+	}
+}
+
+void	ft_cost(t_list *stack_a, t_list *stack_b)
+{
+	int	trigger_a;
+	int	trigger_b;
+	int	sizeStack_a;
+	int	sizeStack_b;
+
+	sizeStack_a = ft_lstsize(stack_a);
+	sizeStack_b = ft_lstsize(stack_b);
+	while (stack_b)
+	{
+		trigger_a = ft_middle(sizeStack_a, stack_b->target_pos);
+		trigger_b = ft_middle(sizeStack_b, stack_b->pos);
+		stack_b->cost_a = ft_calcCost(sizeStack_a, stack_b->target_pos, trigger_a);
+		stack_b->cost_b = ft_calcCost(sizeStack_b, stack_b->pos, trigger_b);
 		stack_b = stack_b->next;
 	}
 }

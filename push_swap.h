@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:58:36 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/04 19:29:52 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/05 12:09:59 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,15 +52,21 @@ int	    ft_lstsize(t_list *lst);
 
 /* ****** push_swap_infos ****** */
 void	ft_index(t_list *stack, int sizeList);
-int 	ft_countIndex(int value, int index, t_list *stack);
 void	ft_position(t_list *stack);
 void	ft_space(t_list *stack_a, t_list *stack_b, int sizeList);
+void	ft_cost(t_list *stack_a, t_list *stack_b);
 
 /* ****** push_swap_actions ****** */
 void    ft_rotate(t_list **stack, char *instruction);
 void    ft_reverseRotate(t_list **stack, char *instruction);
 void    ft_swap(t_list **stack, char *instruction);
 void    ft_push(t_list **stack_a, t_list **stack_b, char * instruction);
+
+/* ****** push_swap_utils.c ****** */
+int 	ft_countIndex(int value, int index, t_list *stack);
+int     ft_middle(int sizeStack, int pos);
+int     ft_calcCost(int sizeStack, int pos, int trigger);
+int     ft_absolute(int number);
 
 /* ****** push_swap_order.c ****** */
 int     ft_checkOrder(t_list *stack);
