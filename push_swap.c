@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
+/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 15:31:47 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/05 13:30:30 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/05 16:07:24 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void    ft_exNumber(int sizeList, char **list)
     if (!ft_checkOrder(stack_a))
     {
         if (sizeList - 1 == 2)
-           ft_swap(&stack_a, "SA\n");
+           ft_swap(&stack_a, "SA");
         else if (sizeList - 1 == 3)
             ft_three(&stack_a);
         else if (sizeList - 1 > 3)

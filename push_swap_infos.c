@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_infos.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
+/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 18:25:37 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/05 13:30:27 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/05 20:21:57 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,30 +42,29 @@ void	ft_position(t_list *stack)
 		pos++;
 	}
 }
+
 void	ft_space(t_list *stack_a, t_list *stack_b, int sizeList)
 {
 	t_list	*temp;
 	int	sizeList_a;
-	int i;
-
+	int	small;
 
 	sizeList_a = ft_lstsize(stack_a);
 	while (stack_b)
 	{
-		ft_position(stack_a);
 		temp = stack_a;
-		i = 1;
+		small = temp->index;
+		ft_position(stack_a);
 		while(temp)
 		{
-			if (temp->index > stack_b->index)
-				break ;
+			if (stack_b->index < temp->index && temp->index < small)
+			{
+				printf("hi\n");
+				stack_b->target_pos = temp->pos;
+				small = temp->index;
+			}
 			temp = temp->next;
-			i++;
 		}
-		if (i > sizeList_a)
-			stack_b->target_pos = 1;
-		else
-			stack_b->target_pos = i;
 		stack_b = stack_b->next;
 	}
 }

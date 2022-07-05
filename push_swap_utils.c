@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 11:40:46 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/05 14:47:05 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/05 19:22:13 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int ft_middle(int sizeStack, int pos)
     trigger = 1;
     if (pos > sizeStack / 2)
         trigger = -1;
-    return trigger;
+    return (trigger);
 }
 
 int ft_calcCost(int sizeStack, int pos, int trigger)

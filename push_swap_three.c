@@ -6,14 +6,14 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 20:43:33 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/05 14:36:23 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/05 16:54:13 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
 
-static int ft_index_max(t_list *stack, int indexRef)
+int ft_index_max(t_list *stack, int indexRef)
 {
     while (stack)
     {
@@ -24,12 +24,12 @@ static int ft_index_max(t_list *stack, int indexRef)
     return 1;
 }
 
-static int ft_index_middle(t_list *stack, int indexRef)
+int ft_index_middle(t_list *stack, int indexRef)
 {
     int count;
 
     count = 0;
-     while (stack)
+    while (stack)
     {
         if (stack->index > indexRef)
             count++;
@@ -53,9 +53,6 @@ void    ft_three(t_list **stack)
         ft_rotate(stack);
         ft_putstr_fd("RA", 1);
     }
-    if ((*stack)->index == 2/*mon index du milieu*/)
-    {
-       ft_swap(stack);
-       ft_putstr_fd("SA", 1);
-    }
+    if (ft_index_middle(*stack, (*stack)->index))
+        ft_swap(stack, "SA");
 }
