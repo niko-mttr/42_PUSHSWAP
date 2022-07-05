@@ -6,23 +6,12 @@
 /*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 18:25:37 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/05 11:39:43 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/05 13:30:27 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
-
-int	ft_countIndex(int value, int index, t_list *stack)
-{
-	while (stack)
-	{
-		if (value > stack->value)
-			index++;
-		stack = stack->next; 
-	}
-	return (index);
-}
 
 void	ft_index(t_list *stack, int sizeList)
 {

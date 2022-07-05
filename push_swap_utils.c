@@ -6,7 +6,7 @@
 /*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 11:40:46 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/05 11:54:23 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/05 13:30:31 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,20 @@ int ft_middle(int sizeStack, int pos)
 
 int ft_calcCost(int sizeStack, int pos, int trigger)
 {
-    
+    int cost;
+
+    if (trigger > 0)
+        cost = pos - 1;
+    else
+        cost = sizeStack - pos + 1;
+    return (cost * trigger);
+}
+    //reverse rotate : donc c'est l'écart entre la position et la taille + 1;
+    //rotate : donc c'est l'écart entre la position et 1;
+
+int ft_absolute(int number)
+{
+    if (number < 0)
+        number *= -1;
+    return number;
 }

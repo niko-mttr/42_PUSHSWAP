@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_checkex.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 15:16:31 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/04 18:18:55 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/05 13:30:39 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

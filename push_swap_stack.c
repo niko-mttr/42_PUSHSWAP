@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_stack.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 15:31:55 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/04 19:31:36 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/05 13:30:45 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
