@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 18:25:37 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/06 13:03:50 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/06 14:26:02 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 void	ft_index(t_list *stack, int size_list)
 {
-	int		nb;
 	t_list	*temp;
 	int		index;
 
@@ -59,17 +58,12 @@ int	ft_smallest(t_list *stack, int small, int target, int ref)
 
 void	ft_target(t_list *stack_a, t_list *stack_b)
 {
-	t_list	*temp;
 	int		size_list;
-	int		small;
 	int		target;
 
 	size_list = ft_lstsize(stack_a) + ft_lstsize(stack_b);
 	while (stack_b)
 	{
-		temp = stack_a;
-		small = -1;
-		target = 1;
 		target = ft_smallest(stack_a, size_list + 1, -1, stack_b->index);
 		if (target == -1)
 			target = ft_smallest(stack_a, size_list + 1, -1, 0);

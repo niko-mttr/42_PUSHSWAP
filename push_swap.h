@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:58:36 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/06 13:14:45 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/06 14:28:52 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef struct s_list
 }					t_list;
 
 /* ****** push_swap.c ****** */
-t_list				*ft_lst_new_number(int number, int pos);
+t_list				*ft_lst_new_number(int number);
 t_list				*ft_fill_stack(int size_list, char **list);
 void				ft_ex_number(int size_list, char **list);
 int					main(int argc, char **argv);
@@ -80,11 +80,13 @@ void				ft_three(t_list **stack);
 
 /* ****** push_swap_more.c ****** */
 void				ft_more(t_list **stack_a, t_list **stack_b, int sizeList);
+void				ft_filter(t_list **stack_a, t_list **stack_b,
+						int size_list);
 void				ft_do_action(t_list **stack_a, t_list **stack_b,
 						t_list *element);
-void				*ft_repeat_rotate(t_list **stack_a, t_list **stack_b,
+void				ft_repeat_rotate(t_list **stack_a, t_list **stack_b,
 						t_list *element, char *action);
-void				*ft_repeat_reverse(t_list **stack_a, t_list **stack_b,
+void				ft_repeat_reverse(t_list **stack_a, t_list **stack_b,
 						t_list *element, char *action);
 
 /* ****** push_swap_finish.c ****** */

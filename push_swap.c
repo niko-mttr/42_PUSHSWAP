@@ -6,14 +6,14 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 15:31:47 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/06 12:50:59 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/06 14:21:31 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
 
-t_list	*ft_lst_new_number(int number, int pos)
+t_list	*ft_lst_new_number(int number)
 {
 	t_list	*new;
 
@@ -42,9 +42,9 @@ t_list	*ft_fill_stack(int size_list, char **list)
 	{
 		number = ft_atoi(list[pos]);
 		if (pos == 1)
-			stack = ft_lst_new_number(number, pos);
+			stack = ft_lst_new_number(number);
 		else
-			ft_lstadd_back(&stack, ft_lst_new_number(number, pos));
+			ft_lstadd_back(&stack, ft_lst_new_number(number));
 		pos++;
 	}
 	return (stack);
