@@ -6,42 +6,44 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 11:16:26 by nmattera          #+#    #+#             */
-/*   Updated: 2022/07/06 12:03:46 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/06 12:54:22 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
 
-int	ft_tallest(t_list *stack, int sizeStack)
+int	ft_tallest(t_list *stack, int size_stack)
 {
-	while (stack->index != sizeStack)
+	while (stack->index != size_stack)
 		stack = stack->next;
-	return stack->pos;
+	return (stack->pos);
 }
 
 void	ft_finish(t_list **stack)
 {
 	int	pos;
-	int	sizeStack;
+	int	size_stack;
 
 	ft_position(*stack);
-	sizeStack = ft_lstsize(*stack);
-	pos = ft_tallest(*stack, sizeStack);
-	if (pos > (sizeStack / 2))
+	size_stack = ft_lstsize(*stack);
+	pos = ft_tallest(*stack, size_stack);
+	if (pos > (size_stack / 2))
 	{
-		while (pos < sizeStack)
+		while (pos < size_stack)
 		{
-			ft_reverseRotate(stack);
-        	ft_putstr_fd("RRA", 1);
+			ft_reverse_rotate(stack);
+			ft_putstr_fd("RRA", 1);
 			pos++;
 		}
 	}
 	else
+	{
 		while (pos)
 		{
 			ft_rotate(stack);
-        	ft_putstr_fd("RA", 1);
+			ft_putstr_fd("RA", 1);
 			pos--;
 		}
+	}
 }

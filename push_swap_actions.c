@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 18:36:42 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/06 12:13:59 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/06 12:20:40 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,18 @@ void	ft_rotate(t_list **stack)
 	tail->next = temp;
 }
 
-void	ft_reverseRotate(t_list **stack)
+void	ft_reverse_rotate(t_list **stack)
 {
 	t_list	*temp;
 	t_list	*top;
-	t_list	*beforeLast;
+	t_list	*before_last;
 
 	top = ft_lstlast(*stack);
-	beforeLast = ft_lstbeforelast(*stack);
+	before_last = ft_lstbeforelast(*stack);
 	temp = *stack;
 	*stack = top;
 	top->next = temp;
-	beforeLast->next = NULL;
+	before_last->next = NULL;
 }
 
 void	ft_swap(t_list **stack, char *instruction)
@@ -56,14 +56,13 @@ void	ft_swap(t_list **stack, char *instruction)
 void	ft_push(t_list **src, t_list **dest)
 {
 	t_list	*transfer;
-	t_list	*destewTop;
 
 	transfer = *src;
 	*src = (*src)->next;
 	ft_lstadd_front(dest, transfer);
 }
 
-void	ft_callAction(t_list **stack_a, t_list **stack_b, char *call)
+void	ft_call_action(t_list **stack_a, t_list **stack_b, char *call)
 {
 	if (!ft_strcmp(call, "PB"))
 		ft_push(stack_a, stack_b);
@@ -74,9 +73,9 @@ void	ft_callAction(t_list **stack_a, t_list **stack_b, char *call)
 	if (!ft_strcmp(call, "RB"))
 		ft_rotate(stack_b);
 	if (!ft_strcmp(call, "RRA"))
-		ft_reverseRotate(stack_a);
+		ft_reverse_rotate(stack_a);
 	if (!ft_strcmp(call, "RRB"))
-		ft_reverseRotate(stack_b);
+		ft_reverse_rotate(stack_b);
 	if (!ft_strcmp(call, "RR"))
 	{
 		ft_rotate(stack_a);
@@ -84,8 +83,8 @@ void	ft_callAction(t_list **stack_a, t_list **stack_b, char *call)
 	}
 	if (!ft_strcmp(call, "RRR"))
 	{
-		ft_reverseRotate(stack_a);
-		ft_reverseRotate(stack_b);
+		ft_reverse_rotate(stack_a);
+		ft_reverse_rotate(stack_b);
 	}
 	ft_putstr_fd(call, 1);
 }

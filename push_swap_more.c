@@ -6,106 +6,118 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 12:22:23 by nmattera          #+#    #+#             */
-/*   Updated: 2022/07/06 12:03:35 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/06 13:27:03 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
-void	*ft_repeatReverse(t_list **stack_a, t_list **stack_b, t_list *element,
+void	*ft_repeat_reverse(t_list **stack_a, t_list **stack_b, t_list *element,
 		char *action)
 {
-	while (!ft_strcmp(action, "RRR") && (element->cost_a != 0 || element->cost_b != 0))
+	while (!ft_strcmp(action, "RRR") && (element->cost_a != 0
+			|| element->cost_b != 0))
 	{
-		ft_callAction(stack_a, stack_b, action);
+		ft_call_action(stack_a, stack_b, action);
 		element->cost_a++;
 		element->cost_b++;
 	}
 	while (!ft_strcmp(action, "RRA") && element->cost_a != 0)
 	{
-		ft_callAction(stack_a, stack_b, action);
+		ft_call_action(stack_a, stack_b, action);
 		element->cost_a++;
 	}
 	while (!ft_strcmp(action, "RRB") && element->cost_b != 0)
 	{
-		ft_callAction(stack_a, stack_b, action);
+		ft_call_action(stack_a, stack_b, action);
 		element->cost_b++;
 	}
 }
 
-void	*ft_repeatRotate(t_list **stack_a, t_list **stack_b, t_list *element,
+void	*ft_repeat_rotate(t_list **stack_a, t_list **stack_b, t_list *element,
 		char *action)
 {
-	while (!ft_strcmp(action, "RR")&& (element->cost_a != 0 || element->cost_b != 0))
+	while (!ft_strcmp(action, "RR") && (element->cost_a != 0
+			|| element->cost_b != 0))
 	{
-		ft_callAction(stack_a, stack_b, action);
+		ft_call_action(stack_a, stack_b, action);
 		element->cost_a--;
 		element->cost_b--;
 	}
-	while (!ft_strcmp(action, "RA")&& element->cost_a != 0)
+	while (!ft_strcmp(action, "RA") && element->cost_a != 0)
 	{
-		ft_callAction(stack_a, stack_b, action);
+		ft_call_action(stack_a, stack_b, action);
 		element->cost_a--;
 	}
-	while (!ft_strcmp(action, "RB")&& element->cost_b != 0)
+	while (!ft_strcmp(action, "RB") && element->cost_b != 0)
 	{
-		ft_callAction(stack_a, stack_b, action);
+		ft_call_action(stack_a, stack_b, action);
 		element->cost_b--;
 	}
 }
 
-void ft_doAction(t_list **stack_a, t_list **stack_b, t_list *element)
+void	ft_do_action(t_list **stack_a, t_list **stack_b, t_list *element)
 {
 	if (element->cost_a > 0 && element->cost_b > 0)
-		ft_repeatRotate(stack_a, stack_b, element, "RR");
+		ft_repeat_rotate(stack_a, stack_b, element, "RR");
 	if (element->cost_a < 0 && element->cost_b < 0)
-		ft_repeatReverse(stack_a, stack_b, element, "RRR");
+		ft_repeat_reverse(stack_a, stack_b, element, "RRR");
 	if (element->cost_a > 0)
-		ft_repeatRotate(stack_a, stack_b, element, "RA");
+		ft_repeat_rotate(stack_a, stack_b, element, "RA");
 	if (element->cost_b > 0)
-		ft_repeatRotate(stack_a, stack_b, element, "RB");
+		ft_repeat_rotate(stack_a, stack_b, element, "RB");
 	if (element->cost_a < 0)
-		ft_repeatReverse(stack_a, stack_b, element, "RRA");
+		ft_repeat_reverse(stack_a, stack_b, element, "RRA");
 	if (element->cost_b < 0)
-		ft_repeatReverse(stack_a, stack_b, element, "RRB");
+		ft_repeat_reverse(stack_a, stack_b, element, "RRB");
 }
 
-void	ft_more(t_list **stack_a, t_list **stack_b, int sizeList)
+void	ft_filter(t_list **stack_a, t_list **stack_b, int size_list)
+{
+	int	count;
+	int	mediane;
+	int	size_list_b;
+
+	count = 0;
+	mediane = size_list / 2;
+	size_list_b = size_list - 3;
+}
+
+void	ft_more(t_list **stack_a, t_list **stack_b, int size_list)
 {
 	int	mediane;
-	int sizeList_b;
+	int	size_list_b;
 	int	count;
 
 	count = 0;
-	mediane = sizeList / 2;
-	sizeList_b = sizeList - 3;
-	while (count < sizeList_b)
+	mediane = size_list / 2;
+	size_list_b = size_list - 3;
+	while (count < size_list_b)
 	{
-		while (sizeList > mediane + 1 && count < sizeList_b -1)
-		{
-			if ((*stack_a)->index <= mediane)
-			{
-				count++;
-				sizeList--;
-				ft_callAction(stack_a, stack_b, "PB");
-			}
-			else
-				ft_callAction(stack_a, stack_b, "RA");
-		}		
-		ft_callAction(stack_a, stack_b, "PB");
+		// while (size_list > mediane + 1 && count < size_list_b - 1)
+		// {
+		// 	if ((*stack_a)->index <= mediane)
+		// 	{
+		// 		count++;
+		// 		size_list--;
+		// 		ft_call_action(stack_a, stack_b, "PB");
+		// 	}
+		// 	else
+		// 		ft_call_action(stack_a, stack_b, "RA");
+		// }
+		ft_call_action(stack_a, stack_b, "PB");
 		count++;
 	}
 	ft_three(stack_a);
-	while(sizeList_b)
+	while (size_list_b)
 	{
 		ft_position(*stack_b);
 		ft_position(*stack_a);
 		ft_target(*stack_a, *stack_b);
 		ft_cost(*stack_a, *stack_b);
-		ft_doAction(stack_a, stack_b, ft_chooseStack(*stack_b));
-		ft_callAction(stack_a, stack_b, "PA");
-		sizeList_b--;
+		ft_do_action(stack_a, stack_b, ft_choose_stack(*stack_b));
+		ft_call_action(stack_a, stack_b, "PA");
+		size_list_b--;
 	}
 	ft_finish(stack_a);
 }
