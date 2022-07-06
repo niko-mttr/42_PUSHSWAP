@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 12:22:23 by nmattera          #+#    #+#             */
-/*   Updated: 2022/07/05 20:22:51 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/06 12:03:35 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,9 +80,6 @@ void	ft_more(t_list **stack_a, t_list **stack_b, int sizeList)
 	count = 0;
 	mediane = sizeList / 2;
 	sizeList_b = sizeList - 3;
-	printf("\nsizeList : %d\n", sizeList);
-	printf("ma mediane : %d\n", mediane);
-	// ft_callAction(stack_a, stack_b, "RA");
 	while (count < sizeList_b)
 	{
 		while (sizeList > mediane + 1 && count < sizeList_b -1)
@@ -100,19 +97,15 @@ void	ft_more(t_list **stack_a, t_list **stack_b, int sizeList)
 		count++;
 	}
 	ft_three(stack_a);
-	int test;
-	test = 2;
-	while(test)
+	while(sizeList_b)
 	{
 		ft_position(*stack_b);
 		ft_position(*stack_a);
-		ft_space(*stack_a, *stack_b, sizeList + 3);
+		ft_target(*stack_a, *stack_b);
 		ft_cost(*stack_a, *stack_b);
 		ft_doAction(stack_a, stack_b, ft_chooseStack(*stack_b));
 		ft_callAction(stack_a, stack_b, "PA");
 		sizeList_b--;
-		test--;
 	}
-	// while(!ft_checkOrder(*stack_a))
-	// 	ft_callAction(stack_a, stack_b, "RA");
+	ft_finish(stack_a);
 }

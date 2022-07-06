@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 18:25:37 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/05 20:21:57 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/06 11:17:15 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,28 +43,38 @@ void	ft_position(t_list *stack)
 	}
 }
 
-void	ft_space(t_list *stack_a, t_list *stack_b, int sizeList)
+int	ft_smallest(t_list *stack, int small, int target, int ref)
+{
+	while(stack)
+	{
+		if (stack->index < small && stack->index > ref)
+		{
+			target = stack->pos;
+			small = stack->index;
+		}
+		stack = stack->next;
+	}
+	return target;
+
+}
+
+void	ft_target(t_list *stack_a, t_list *stack_b)
 {
 	t_list	*temp;
-	int	sizeList_a;
+	int	sizeList;
 	int	small;
+	int	target;
 
-	sizeList_a = ft_lstsize(stack_a);
+	sizeList = ft_lstsize(stack_a) + ft_lstsize(stack_b);
 	while (stack_b)
 	{
 		temp = stack_a;
-		small = temp->index;
-		ft_position(stack_a);
-		while(temp)
-		{
-			if (stack_b->index < temp->index && temp->index < small)
-			{
-				printf("hi\n");
-				stack_b->target_pos = temp->pos;
-				small = temp->index;
-			}
-			temp = temp->next;
-		}
+		small = -1;
+		target = 1;
+		target = ft_smallest(stack_a, sizeList + 1 , -1, stack_b->index);
+		if (target == -1)
+			target = ft_smallest(stack_a, sizeList + 1, -1, 0);
+		stack_b->target_pos = target;
 		stack_b = stack_b->next;
 	}
 }

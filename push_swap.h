@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:58:36 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/05 16:06:09 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/06 11:25:50 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	        ft_lstsize(t_list *lst);
 /* ****** push_swap_infos ****** */
 void	    ft_index(t_list *stack, int sizeList);
 void	    ft_position(t_list *stack);
-void	    ft_space(t_list *stack_a, t_list *stack_b, int sizeList);
+void	    ft_target(t_list *stack_a, t_list *stack_b);
 void	    ft_cost(t_list *stack_a, t_list *stack_b);
 
 /* ****** push_swap_actions ****** */
@@ -84,5 +84,8 @@ void	*ft_repeatRotate(t_list **stack_a, t_list **stack_b, t_list *element,
 		char *action);
 void	*ft_repeatReverse(t_list **stack_a, t_list **stack_b, t_list *element,
 		char *action);
+
+/* ****** push_swap_finish.c ****** */
+void	ft_finish(t_list **stack);
 
 #endif
