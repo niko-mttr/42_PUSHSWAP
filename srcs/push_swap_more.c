@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_more.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 12:22:23 by nmattera          #+#    #+#             */
-/*   Updated: 2022/07/06 14:28:42 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/08 15:30:30 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 void	ft_repeat_reverse(t_list **stack_a, t_list **stack_b, t_list *element,
 		char *action)

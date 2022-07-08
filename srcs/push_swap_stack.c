@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_stack.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 15:31:55 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/06 12:33:43 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/08 15:30:47 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {

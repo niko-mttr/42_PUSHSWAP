@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_pars.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 18:06:38 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/06 12:33:27 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/08 15:30:42 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 int	ft_strcmp(char *s1, char *s2)
 {

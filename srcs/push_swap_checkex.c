@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_checkex.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 15:16:31 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/06 14:16:11 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/08 15:30:08 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 #include <stdio.h>
 
 void ft_checkex(t_list *chaine, char *name)

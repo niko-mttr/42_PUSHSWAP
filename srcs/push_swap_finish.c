@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_finish.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 11:16:26 by nmattera          #+#    #+#             */
-/*   Updated: 2022/07/06 12:54:22 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/08 15:30:17 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 #include <stdio.h>
 
 int	ft_tallest(t_list *stack, int size_stack)

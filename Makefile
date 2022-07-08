@@ -3,49 +3,55 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+         #
+#    By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/05/23 12:13:08 by nmattera          #+#    #+#              #
-#    Updated: 2022/07/06 14:20:15 by nmattera         ###   ########.fr        #
+#    Created: 2022/07/08 15:23:20 by nicolasmatt       #+#    #+#              #
+#    Updated: 2022/07/08 16:28:12 by nicolasmatt      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME = pushswap
+NAME_BONUS = pushswap_bonus
 
-LIBFT = ./libft
+SRCS = srcs/push_swap_actions.c srcs/push_swap_checkex.c srcs/push_swap_finish.c srcs/push_swap_infos.c srcs/push_swap_more.c srcs/push_swap_order.c srcs/push_swap_pars.c srcs/push_swap_stack.c srcs/push_swap_three.c srcs/push_swap_utils.c srcs/push_swap.c
+SRCSB = srcsb/push_swap.c
 
-NAME = pushswap.a
+OBJS = ${SRCS:.c=.o}
+OBJSB = ${SRCSB:.c=.o}
 
-SRCS =	push_swap.c push_swap_pars.c \
-		push_swap_checkex.c push_swap_stack.c \
-		push_swap_actions.c push_swap_infos.c \
-		push_swap_order.c push_swap_three.c \
-		push_swap_more.c push_swap_finish.c \
-		push_swap_utils.c
-
-OBJS = $(SRCS:.c=.o)
-
-CC = gcc
-
+cc = cc
 CFLAGS = -Wall -Wextra -Werror
 
-.c.o :
-	$(CC) $(CFLAGS) -c -I $(LIBFT) $< -o $@
+INCLUDES = -I libft -I includes
 
-RM = rm -f
+.c.o: @${CC} ${CFLAGS} ${INCLUDES} -c -o $@ $<
 
-$(NAME): $(OBJS)
-	cd $(LIBFT) && $(MAKE)
-	cp libft/libft.a $(NAME)
-	ar -rcs $(NAME) $(OBJS)
+all: ${NAME}
 
-all: $(NAME)
+${NAME}: ${OBJS}
+	@echo "----Compiling lib----"
+	@make re -C libft --no-print-directory
+	@echo "Push Swap Compiled!"
+
+${NAME_BONUS}: ${OBJS}
+	@echo "----Compiling lib----"
+	@make re -C libft --no-print-directory
 
 clean:
-	$(RM) -r $(OBJS)
-	cd $(LIBFT) && $(MAKE) clean
+	@make clean -C libft --no-print-directory
+	@rm -f ${OBJS}
+	@rm -f ${OBJSB}
 
 fclean: clean
-	$(RM) $(NAME)
-	cd $(LIBFT) && $(MAKE) fclean
+	@make fclean -C libft
+	@rm -f ${NAME}
+	@rm -f $(NAME_BONUS)
+	@echo "Deleting EVERYTHING!\n"
 
-re: fclean all 
+re: fclean all
+
+bonus: ${NAME_BONUS}
+
+re_bonus: fclean bonus
+
+.PHONY: all clean fclean re re_bonus bonus

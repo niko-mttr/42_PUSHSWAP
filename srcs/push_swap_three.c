@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_three.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 20:43:33 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/06 12:33:58 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/08 15:30:54 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 #include <stdio.h>
 
 int	ft_index_max(t_list *stack, int indexRef)

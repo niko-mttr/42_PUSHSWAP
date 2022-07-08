@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_actions.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 18:36:42 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/06 12:20:40 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/08 15:30:09 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 void	ft_rotate(t_list **stack)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_order.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 19:42:02 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/06 12:32:00 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/08 15:30:36 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 int	ft_check_order(t_list *stack)
 {

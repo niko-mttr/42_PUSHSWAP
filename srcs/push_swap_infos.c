@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_infos.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 18:25:37 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/06 14:26:02 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/08 15:30:24 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 #include <stdio.h>
 
 void	ft_index(t_list *stack, int size_list)
