@@ -6,14 +6,14 @@
 #    By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/08 15:23:20 by nicolasmatt       #+#    #+#              #
-#    Updated: 2022/07/08 16:28:12 by nicolasmatt      ###   ########.fr        #
+#    Updated: 2022/07/11 12:23:12 by nicolasmatt      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = pushswap
 NAME_BONUS = pushswap_bonus
 
-SRCS = srcs/push_swap_actions.c srcs/push_swap_checkex.c srcs/push_swap_finish.c srcs/push_swap_infos.c srcs/push_swap_more.c srcs/push_swap_order.c srcs/push_swap_pars.c srcs/push_swap_stack.c srcs/push_swap_three.c srcs/push_swap_utils.c srcs/push_swap.c
+SRCS = srcs/push_swap_actions.c srcs/push_swap_checkex.c srcs/push_swap_finish.c srcs/push_swap_infos.c srcs/push_swap_more.c srcs/push_swap_order.c srcs/push_swap_pars.c srcs/push_swap_stack.c srcs/push_swap_three.c srcs/push_swap_utils.c srcs/push_swap.c srcs/push_swap_tools.c
 SRCSB = srcsb/push_swap.c
 
 OBJS = ${SRCS:.c=.o}

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 15:03:33 by nmattera          #+#    #+#             */
-/*   Updated: 2022/05/25 17:17:26 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/11 12:27:29 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_word(char const *s, char c)
 {
@@ -77,7 +76,7 @@ int	ft_pos(char const *s, char c, int word)
 	return (i);
 }
 
-char	*ft_fillsplit(char const *s, char c, int word)
+char	*ft_fill(char const *s, char c, int word)
 {
 	int		count;
 	int		pos;
@@ -113,23 +112,9 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	while (i < ft_word(s, c))
 	{
-		tab[i] = ft_fillsplit(s, c, i);
+		tab[i] = ft_fill(s, c, i);
 		i++;
 	}
 	tab[i] = 0;
 	return (tab);
 }
-
-/* #include <stdio.h>
-
-int main()
-{
-	char	**tab;
-	char	*test = NULL;
-
-	tab = ft_split("!!!!!!", '!');
-
-	printf("%s\n%s", tab[0], test);
-	free(tab);
-}
- */

@@ -6,7 +6,7 @@
 /*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:58:36 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/08 15:29:38 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/11 12:25:36 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,8 @@ void				ft_repeat_reverse(t_list **stack_a, t_list **stack_b,
 /* ****** push_swap_finish.c ****** */
 int					ft_tallest(t_list *stack, int size_stack);
 void				ft_finish(t_list **stack);
+
+/* ****** push_swap_tools.c ****** */
+int 				ft_check_string(char *list);
 
 #endif
