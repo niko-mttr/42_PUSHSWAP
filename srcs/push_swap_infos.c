@@ -6,7 +6,7 @@
 /*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 18:25:37 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/08 15:30:24 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/11 17:44:39 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_index(t_list *stack, int size_list)
 	int		index;
 
 	temp = stack;
-	while (size_list > 1)
+	while (size_list > 0)
 	{
 		index = 1;
 		index = ft_count_index(temp->value, index, stack);
