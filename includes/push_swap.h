@@ -6,7 +6,7 @@
 /*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:58:36 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/11 12:25:36 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/11 16:47:25 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,12 @@ typedef struct s_list
 /* ****** push_swap.c ****** */
 t_list				*ft_lst_new_number(int number);
 t_list				*ft_fill_stack(int size_list, char **list);
-void				ft_ex_number(int size_list, char **list);
+int					ft_ex_number(int size_list, char **list);
 int					main(int argc, char **argv);
 
 /* ******* push_swap_pars ****** */
+int					ft_compare(t_list *stack);
 int					ft_pars_number(int sizeList, char **list);
-int					ft_doublon(int sizeList, char **list, int check);
-int					ft_strcmp(char *s1, char *s2);
 
 /* ******* push_swap_checkex ******* */
 void				ft_checkex(t_list *chaine, char *name);
@@ -93,7 +92,8 @@ void				ft_repeat_reverse(t_list **stack_a, t_list **stack_b,
 int					ft_tallest(t_list *stack, int size_stack);
 void				ft_finish(t_list **stack);
 
-/* ****** push_swap_tools.c ****** */
-int 				ft_check_string(char *list);
+/* ****** push_swap_exit.c ****** */
+// int 				ft_check_string(char *list);
+int					ft_strcmp(char *s1, char *s2);
 
 #endif
