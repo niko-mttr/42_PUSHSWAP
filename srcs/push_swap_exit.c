@@ -6,7 +6,7 @@
 /*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 11:12:43 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/11 16:47:24 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/11 19:31:04 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,30 @@ int	ft_strcmp(char *s1, char *s2)
 	}
 	i = (*s1 - *s2);
 	return (i);
+}
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
+{
+	if (!del)
+		return ;
+	(*del)(lst->content);
+	free(lst);
+	lst = NULL;
+}
+
+void	ft_lstclear(t_list **lst, void (*del)(void *))
+{
+	t_list	*tmp;
+
+	if (!del)
+		return ;
+	while (*lst)
+	{
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		(*lst) = tmp;
+	}
+	lst = NULL;
 }
 
 //ft_mute

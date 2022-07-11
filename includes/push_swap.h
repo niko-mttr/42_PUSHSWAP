@@ -6,7 +6,7 @@
 /*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:58:36 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/11 16:47:25 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/11 19:31:28 by nicolasmatt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,7 @@ void				ft_finish(t_list **stack);
 /* ****** push_swap_exit.c ****** */
 // int 				ft_check_string(char *list);
 int					ft_strcmp(char *s1, char *s2);
+void				ft_lstdelone(t_list *lst, void (*del)(void *));
+void				ft_lstclear(t_list **lst, void (*del)(void *));
 
 #endif
