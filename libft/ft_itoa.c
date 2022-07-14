@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 09:55:08 by nmattera          #+#    #+#             */
-/*   Updated: 2022/05/31 16:52:42 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/13 19:59:37 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_size(long n)
 	return (count);
 }
 
-char	*ft_fill(char *str, int size, int minus, long n)
+static char	*ft_fill(char *str, int size, int minus, long n)
 {
 	str[size] = 0;
 	size--;

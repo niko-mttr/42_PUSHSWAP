@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
+/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 11:40:46 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/08 15:31:01 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/14 10:58:29 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int	ft_middle(int size_stack, int pos)
 	int	trigger;
 
 	trigger = 1;
+	if (size_stack == 1)
+		return (0);
 	if (pos > size_stack / 2)
 		trigger = -1;
 	return (trigger);

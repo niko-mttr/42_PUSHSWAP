@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
+/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 15:03:33 by nmattera          #+#    #+#             */
-/*   Updated: 2022/07/11 12:27:29 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/13 19:59:35 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int	ft_pos(char const *s, char c, int word)
 	return (i);
 }
 
-char	*ft_fill(char const *s, char c, int word)
+static char	*ft_fill(char const *s, char c, int word)
 {
 	int		count;
 	int		pos;

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+         #
+#    By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/12 18:28:39 by nmattera          #+#    #+#              #
-#    Updated: 2022/06/30 15:35:26 by nicolasmatt      ###   ########.fr        #
+#    Updated: 2022/07/13 18:22:44 by nmattera         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS =	ft_isalpha.c ft_isdigit.c \
 		ft_tolower.c ft_strchr.c \
 		ft_strrchr.c ft_strncmp.c \
 		ft_memchr.c ft_memcmp.c \
-		ft_strnstr.c ft_atoi.c \
+		ft_strnstr.c \
 		ft_calloc.c ft_strdup.c \
 		ft_substr.c ft_striteri.c \
 		ft_strjoin.c ft_strtrim.c \

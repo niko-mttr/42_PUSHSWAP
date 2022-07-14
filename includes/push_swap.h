@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
+/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:58:36 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/11 19:31:28 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/14 11:54:10 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "../libft/libft.h"
+# include <stdio.h>
 # include <stdlib.h>
 
 typedef struct s_list
@@ -24,7 +25,6 @@ typedef struct s_list
 	int				target_pos;
 	int				cost_a;
 	int				cost_b;
-	void			*content;
 	struct s_list	*next;
 }					t_list;
 
@@ -35,6 +35,7 @@ int					ft_ex_number(int size_list, char **list);
 int					main(int argc, char **argv);
 
 /* ******* push_swap_pars ****** */
+int					ft_doublon(t_list *cmp, int value, int pos);
 int					ft_compare(t_list *stack);
 int					ft_pars_number(int sizeList, char **list);
 
@@ -71,6 +72,8 @@ t_list				*ft_choose_stack(t_list *sk);
 
 /* ****** push_swap_order.c ****** */
 int					ft_check_order(t_list *stack);
+int					ft_strcmp(char *s1, char *s2);
+void				ft_delstack(t_list **stack);
 
 /* ****** push_swap_three.c ****** */
 int					ft_index_max(t_list *stack, int indexRef);
@@ -93,9 +96,8 @@ int					ft_tallest(t_list *stack, int size_stack);
 void				ft_finish(t_list **stack);
 
 /* ****** push_swap_exit.c ****** */
-// int 				ft_check_string(char *list);
-int					ft_strcmp(char *s1, char *s2);
-void				ft_lstdelone(t_list *lst, void (*del)(void *));
-void				ft_lstclear(t_list **lst, void (*del)(void *));
+
+/* ****** push_swap_value.c ****** */
+int					ft_atoi(const char *nptr, t_list **stack);
 
 #endif
