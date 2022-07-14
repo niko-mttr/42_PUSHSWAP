@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 12:22:23 by nmattera          #+#    #+#             */
-/*   Updated: 2022/07/14 10:59:13 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/14 18:51:15 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,22 +106,13 @@ void	ft_more(t_list **stack_a, t_list **stack_b, int size_list)
 	size_list_b = size_list - 3;
 	ft_filter(stack_a, stack_b, size_list);
 	ft_three(stack_a);
-	/* ****** */
-	ft_position(*stack_b);
-	ft_position(*stack_a);
-	ft_target(*stack_a, *stack_b);
-	ft_cost(*stack_a, *stack_b);
-	/* ****** */
-	// printf("\nA la fin de mes actions de FT_MORE\n");
-	// ft_checkex(*stack_a, "-----stack_a-----\n");
-	// ft_checkex(*stack_b, "-----stack_b-----\n");
 	while (size_list_b)
 	{
 		ft_position(*stack_b);
 		ft_position(*stack_a);
 		ft_target(*stack_a, *stack_b);
 		ft_cost(*stack_a, *stack_b);
-		ft_do_action(stack_a, stack_b, ft_choose_stack(*stack_b));	
+		ft_do_action(stack_a, stack_b, ft_choose_stack(*stack_b));
 		ft_call_action(stack_a, stack_b, "PA");
 		size_list_b--;
 	}

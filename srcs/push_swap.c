@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 15:31:47 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/14 11:48:53 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/14 18:56:15 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,9 @@ int	ft_ex_number(int size_list, char **list)
 	stack_a = ft_fill_stack(size_list, list);
 	ft_index(stack_a, size_list);
 	ft_position(stack_a);
-	if(!ft_compare(stack_a))
+	if (!ft_compare(stack_a))
 	{
-		printf("EGALITE\n");
-		// ft_free(stack_a);
+		ft_putstr_fd("Error\n", 1);
 		return (0);
 	}
 	if (!ft_check_order(stack_a))
@@ -96,7 +95,6 @@ int	main(int argc, char **argv)
 		split = 1;
 		list = ft_split(argv[1], ' ');
 		if (!list)
-			// ft_exit();
 			return (0);
 	}
 	else
@@ -115,5 +113,8 @@ int	main(int argc, char **argv)
 
 /* ****** RESTE A FAIRE ****** */
 // free
-// norminette 
+// norminette
 // cosignes de retour
+// renommer les stack en a et b
+//si y a pas de parametres le program sort rien
+//si y a une erreur le rpogramme affcihe erreur
