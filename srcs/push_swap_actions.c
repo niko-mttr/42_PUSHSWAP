@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_actions.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
+/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 18:36:42 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/11 16:47:31 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/15 13:11:47 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,24 +64,24 @@ void	ft_push(t_list **src, t_list **dest)
 
 void	ft_call_action(t_list **stack_a, t_list **stack_b, char *call)
 {
-	if (!ft_strcmp(call, "PB"))
+	if (!ft_strcmp(call, "pb"))
 		ft_push(stack_a, stack_b);
-	if (!ft_strcmp(call, "PA"))
+	if (!ft_strcmp(call, "pa"))
 		ft_push(stack_b, stack_a);
-	if (!ft_strcmp(call, "RA"))
+	if (!ft_strcmp(call, "ra"))
 		ft_rotate(stack_a);
-	if (!ft_strcmp(call, "RB"))
+	if (!ft_strcmp(call, "rb"))
 		ft_rotate(stack_b);
-	if (!ft_strcmp(call, "RRA"))
+	if (!ft_strcmp(call, "rra"))
 		ft_reverse_rotate(stack_a);
-	if (!ft_strcmp(call, "RRB"))
+	if (!ft_strcmp(call, "rrb"))
 		ft_reverse_rotate(stack_b);
-	if (!ft_strcmp(call, "RR"))
+	if (!ft_strcmp(call, "rr"))
 	{
 		ft_rotate(stack_a);
 		ft_rotate(stack_b);
 	}
-	if (!ft_strcmp(call, "RRR"))
+	if (!ft_strcmp(call, "rrr"))
 	{
 		ft_reverse_rotate(stack_a);
 		ft_reverse_rotate(stack_b);

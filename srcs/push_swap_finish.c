@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_finish.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
+/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 11:16:26 by nmattera          #+#    #+#             */
-/*   Updated: 2022/07/08 15:30:17 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/15 13:16:03 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_finish(t_list **stack)
 		while (pos < size_stack)
 		{
 			ft_reverse_rotate(stack);
-			ft_putstr_fd("RRA", 1);
+			ft_putstr_fd("rra", 1);
 			pos++;
 		}
 	}
@@ -42,7 +42,7 @@ void	ft_finish(t_list **stack)
 		while (pos)
 		{
 			ft_rotate(stack);
-			ft_putstr_fd("RA", 1);
+			ft_putstr_fd("ra", 1);
 			pos--;
 		}
 	}

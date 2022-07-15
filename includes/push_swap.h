@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:58:36 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/14 11:54:10 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/15 13:05:03 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ typedef struct s_list
 
 /* ****** push_swap.c ****** */
 t_list				*ft_lst_new_number(int number);
-t_list				*ft_fill_stack(int size_list, char **list);
-int					ft_ex_number(int size_list, char **list);
+t_list				*ft_fill_stack(int size_list, char **list, int split);
+int					ft_ex_number(int size_list, char **list, int split);
 int					main(int argc, char **argv);
 
 /* ******* push_swap_pars ****** */
@@ -98,6 +98,7 @@ void				ft_finish(t_list **stack);
 /* ****** push_swap_exit.c ****** */
 
 /* ****** push_swap_value.c ****** */
-int					ft_atoi(const char *nptr, t_list **stack);
+int					ft_atoi(const char *nptr, t_list **stack, int split, char **list);
+void	ft_end(int split, t_list **stack_a, char **list);
 
 #endif

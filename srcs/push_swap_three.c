@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_three.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasmattera <nicolasmattera@student.    +#+  +:+       +#+        */
+/*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 20:43:33 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/08 15:30:54 by nicolasmatt      ###   ########.fr       */
+/*   Updated: 2022/07/15 13:12:11 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,13 @@ void	ft_three(t_list **stack)
 	if (ft_index_max(*stack, (*stack)->next->index))
 	{
 		ft_reverse_rotate(stack);
-		ft_putstr_fd("RRA", 1);
+		ft_putstr_fd("rra", 1);
 	}
 	if (ft_index_max(*stack, (*stack)->index))
 	{
 		ft_rotate(stack);
-		ft_putstr_fd("RA", 1);
+		ft_putstr_fd("ra", 1);
 	}
 	if (ft_index_middle(*stack, (*stack)->index))
-		ft_swap(stack, "SA");
+		ft_swap(stack, "sa");
 }

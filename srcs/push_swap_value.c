@@ -6,13 +6,13 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 15:26:57 by nmattera          #+#    #+#             */
-/*   Updated: 2022/07/14 18:54:58 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/15 13:06:13 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	ft_atoi(const char *nptr, t_list **stack)
+int	ft_atoi(const char *nptr, t_list **stack, int split, char **list)
 {
 	long	res;
 	int		minus;
@@ -37,7 +37,7 @@ int	ft_atoi(const char *nptr, t_list **stack)
 	if (res * minus < -2147483648 || res * minus > 2147483647)
 	{
 		ft_putstr_fd("Error\n", 1);
-		ft_delstack(stack);
+		ft_end(split, stack, list);
 		exit(EXIT_FAILURE);
 	}
 	return ((int)(res * minus));
