@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 12:22:23 by nmattera          #+#    #+#             */
-/*   Updated: 2022/07/15 13:13:58 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/16 20:04:50 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_repeat_reverse(t_list **stack_a, t_list **stack_b, t_list *element,
 		char *action)
 {
 	while (!ft_strcmp(action, "rrr") && (element->cost_a != 0
-			|| element->cost_b != 0))
+			&& element->cost_b != 0))
 	{
 		ft_call_action(stack_a, stack_b, action);
 		element->cost_a++;
@@ -38,7 +38,7 @@ void	ft_repeat_rotate(t_list **stack_a, t_list **stack_b, t_list *element,
 		char *action)
 {
 	while (!ft_strcmp(action, "rr") && (element->cost_a != 0
-			|| element->cost_b != 0))
+			&& element->cost_b != 0))
 	{
 		ft_call_action(stack_a, stack_b, action);
 		element->cost_a--;

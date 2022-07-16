@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 15:31:47 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/15 15:01:55 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/16 19:11:50 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,7 +152,7 @@ int	main(int argc, char **argv)
 		if (!list)
 			return (0);
 	}
-	else
+	if (argc > 2)
 	{
 		argv++;
 		list = argv;
