@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:58:36 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/15 13:05:03 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/16 20:22:46 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,9 +96,12 @@ int					ft_tallest(t_list *stack, int size_stack);
 void				ft_finish(t_list **stack);
 
 /* ****** push_swap_exit.c ****** */
+void				ft_end(int split, t_list **stack_a, char **list);
+void				ft_malloc_error(t_list *stack, char **list, int split);
 
 /* ****** push_swap_value.c ****** */
-int					ft_atoi(const char *nptr, t_list **stack, int split, char **list);
-void	ft_end(int split, t_list **stack_a, char **list);
+void				ft_malloc_error(t_list *stack, char **list, int split);
+int					ft_atoi(const char *nptr, t_list **stack, int split,
+						char **list);
 
 #endif

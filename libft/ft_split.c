@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 15:03:33 by nmattera          #+#    #+#             */
-/*   Updated: 2022/07/16 20:10:10 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/16 20:55:42 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ static char	*ft_fill(char const *s, char c, int word)
 	pos = ft_pos(s, c, word);
 	i = 0;
 	while (count > 0)
-	{	
+	{
 		str[i] = s[pos + i];
 		count--;
 		i++;
@@ -113,6 +113,12 @@ char	**ft_split(char const *s, char c)
 	while (i < ft_word(s, c))
 	{
 		tab[i] = ft_fill(s, c, i);
+		if (!tab[i])
+		{
+			while (i >= 0)
+				tab[i] = 0;
+			break ;
+		}
 		i++;
 	}
 	tab[i] = 0;
