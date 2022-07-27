@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 15:26:57 by nmattera          #+#    #+#             */
-/*   Updated: 2022/07/16 20:22:18 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/27 11:24:38 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_over(int split, t_list **stack, char **list)
 {
-	ft_putstr_fd("Error\n", 1);
+	ft_putstr_fd("Error", 1);
 	ft_end(split, stack, list);
 	exit(EXIT_FAILURE);
 }
