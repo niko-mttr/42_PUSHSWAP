@@ -6,18 +6,16 @@
 #    By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/08 15:23:20 by nicolasmatt       #+#    #+#              #
-#    Updated: 2022/07/15 13:21:27 by nmattera         ###   ########.fr        #
+#    Updated: 2022/07/27 11:42:47 by nmattera         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 NAME_BONUS = pushswap_bonus
 
-SRCS = srcs/push_swap_actions.c srcs/push_swap_checkex.c srcs/push_swap_finish.c srcs/push_swap_infos.c srcs/push_swap_more.c srcs/push_swap_order.c srcs/push_swap_pars.c srcs/push_swap_value.c srcs/push_swap_stack.c srcs/push_swap_three.c srcs/push_swap_utils.c srcs/push_swap.c
-SRCSB = srcsb/push_swap.c
+SRCS = srcs/push_swap_actions.c srcs/push_swap_finish.c srcs/push_swap_infos.c srcs/push_swap_more.c srcs/push_swap_order.c srcs/push_swap_pars.c srcs/push_swap_value.c srcs/push_swap_stack.c srcs/push_swap_three.c srcs/push_swap_utils.c srcs/push_swap.c srcs/push_swap_exit.c
 
 OBJS = ${SRCS:.c=.o}
-OBJSB = ${SRCSB:.c=.o}
 
 cc = cc
 CFLAGS = -Wall -Wextra -Werror -g
@@ -33,11 +31,6 @@ ${NAME}: ${OBJS}
 	@make re -C libft --no-print-directory
 	@$(CC) $(CFLAGS) ${OBJS} -Llibft -lft ${INCLUDES} -o ${NAME}
 	@echo "Push Swap Compiled!"
-
-${NAME_BONUS}: ${OBJS}
-	@echo "----Compiling lib----"
-	@make re -C libft --no-print-directory
-	@$(CC) $(CFLAGS) ${OBJSB} -Llibft -lft ${INCLUDES} -o ${NAME_BONUS}
 
 clean:
 	@make clean -C libft --no-print-directory
