@@ -6,7 +6,7 @@
 /*   By: nmattera <nmattera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:58:36 by nicolasmatt       #+#    #+#             */
-/*   Updated: 2022/07/16 20:22:46 by nmattera         ###   ########.fr       */
+/*   Updated: 2022/07/27 11:43:46 by nmattera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,6 @@ int					main(int argc, char **argv);
 int					ft_doublon(t_list *cmp, int value, int pos);
 int					ft_compare(t_list *stack);
 int					ft_pars_number(int sizeList, char **list);
-
-/* ******* push_swap_checkex ******* */
-void				ft_checkex(t_list *chaine, char *name);
 
 /* ******* push_swap_stack ****** */
 t_list				*ft_lstlast(t_list *lst);
